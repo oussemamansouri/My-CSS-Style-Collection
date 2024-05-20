@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0070cb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* profile image style start here  */
+
+.profile-container{
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5%;
+    border: 7px solid #ffffff;
+}
+
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+
+.overlayer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    background-image: linear-gradient(to top,#008CBA,#008CBA00);
+}
+
+.profile-container:hover .overlayer{
+    height: 100%;
+}
+
+.profile-container:hover .image{
+    transform: scale(1.2,1.2);
+}
+
+.text{
+    font-family: "Brush Script MT";
+    font-size: 30px;
+    white-space: nowrap;
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* profile image style end here  */
