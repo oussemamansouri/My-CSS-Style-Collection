@@ -62,3 +62,53 @@ body{
 }
 
 /* profile image style end here  */
+
+
+/* star style start here */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="star"] {
+    z-index: -1;
+    position: absolute;
+    margin: 1em auto;
+    width: 1em;
+    font-size: 1em;
+    transition: .5s;
+  }
+  
+  [class*="star"]::before {
+    content: "";
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 1em;
+    height: 1.15em;
+    transform: rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+  }
+  
+  [class*="star"]::after {
+    content: "";
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 1em;
+    height: 1.15em;
+    transform: rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+  }
+
+  .container:hover .star1 {
+    transform: translate(60px,-180px);
+  }
+  .container:hover .star2 {
+    transform: translate(-60px,-180px);
+  }
+  .container:hover .star3 {
+    transform: translate(0px,-210px);
+  }
+
+
+/* star style start here */
+
